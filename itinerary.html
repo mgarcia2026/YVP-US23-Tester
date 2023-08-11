@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Journal</title>
+    <title>Itinerary</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@ body {
     
 header {
     width: 100%;
-    height: 230px;
+    height: 250px;
     background-color: #FFE6EB;
     text-align: center;
     align-content: center;
@@ -54,6 +54,12 @@ header {
     padding: 10px;
     height: 2em;
     margin: 30px;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    background-color: #adf7f7;
+  color: white;
 }
 
 a {
@@ -76,14 +82,15 @@ img {
     padding: 15px;
 }
 
-.pic {
-    margin: 0;
-    padding: 0;
+.place {
+    font-family: 'Kosugi Maru', sans-serif;
+    margin: 10px;
+    padding: 10px;
     height: 100%;
     width: 100%;
     background-color: #FFFFFF;
     border-radius: 5px;
-    box-shadow: 5px 5px #ecd5e3;
+    box-shadow: 3px 3px #FFE6EB;
 }
 
 .flex-container {
@@ -94,7 +101,7 @@ img {
 .flex-child {
  flex: auto;
  margin: 20px;
-}  
+}
 
 p {
     font-family: 'Kosugi Maru', sans-serif;
@@ -126,10 +133,28 @@ h1 {
 
 h2 {
     font-family: 'Courier Prime', sans-serif;
-    font-size: 3em;
+    color: #a9d1d1;
+    text-shadow: 1px 1px #F8FDCF;
+    font-size: 1.5em;
 }
 
+h5 {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 0.8em;
+    color: #f1bae0;
+    margin: 0;
+    padding: 10px;
+    float: left;
+}
 
+h6 {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 0.7em;
+    color: #f599d8;
+    margin: 0;
+    padding: 10px;
+    float: left;
+}
 
 @media (max-width: 768px) {
 body {
@@ -139,7 +164,7 @@ body {
     
 header {
     width: 100%;
-    height: 230px;
+    height: 120px;
     background-color: #FFE6EB;
     text-align: center;
 }
@@ -255,7 +280,7 @@ h2 {
 @media (max-width: 659px) {
 
     header {
-      height: 150px;
+      height: 180px;
       width: 100%;
 
     }
@@ -300,7 +325,6 @@ h3 {
     height: 1em;
     margin: 15px;
 }
-
 }
 
 @media (max-width: 420px) {
@@ -308,11 +332,14 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
-}
-
+    }
 }
 
 @media (max-width: 390px) {
+
+    h1 {
+    font-size: 1.5em;
+    }
 
     .button {
     font-family: 'Kosugi Maru', sans-serif;
@@ -354,27 +381,87 @@ a {
 
   </head>
   <body>
-<header>
+<header id = "header">
     <p>cantamus in animo grato.</p>
     <h3>site developed by martina garcia</h3>
-      <img src = "logo.png" alt = "logo" width = "15%" onclick = "goHome()">
-    <h1>YVP US23</h1>
+      <img src = "logo.png" alt = "logo" width = "15%" onclick="goHome()">
+    <h1> Itinerary </h1>
 <div class = "button"> <a href = "values.html">About Us</a> </div>
 <div class = "button"> <a href = "itinerary.html">Itinerary</a> </div>
 <div class = "button"> <a href = "diary.html">The Journal </a> </div>
 <div class = "button"> <a href = "highlights.html">Highlights</a> </div>
 </header>
 
+<div class="flex-container">
 
-<div class = "flex-container"> 
-   <div class = "flex-child">
-    <h1> Development in progress! </h1>
-   </div>
-</div>
-
-
+    <div class = 'flex-child' id = 'Maryland'>
+        <div class = "place"> 
+            <h2>Maryland</h2> 
+                <h6> June 29, 2023 </h6> <h5>- Concert at St. Columba Catholic Church</h5>
+                <br>
+                <h6>June 30, 2023</h6> <h5>Performance at Ingleside
+                <br>
+                 and Concert at St. Mark's Presbytarian Church</h5>
+                <br>
+                <h6>July 1, 2023</h6> <h5>- Performance at the Basilica</h5>
+                <br>
+                <h6>July 3, 2023</h6> <h5>- Concert with Voices Together
+                <br> at Dekelboum Hall in Clarice Smith Performing Arts Center </h5>
+        </div>
+        </div>
     
+    <div class="flex-child" id = 'New York'>
+        <div class = 'place'> 
+            <h2> New York </h2>
 
+                <h6>July 6, 2023</h6> <h5>- Concert at St. Patrick's Cathedral
+                <br>
+                and Courtesy Call in the Philippine Embassy</h5>
+                <br>
+                <h6>July 7, 2023</h6> <h5> - Concert in Carnegie Hall
+                <br>
+                and World Premiere of Missa Virtutum </h5>
+            
+            </div>
+    </div>
+
+    <div class = "flex-child" id = 'San Francisco'>
+        <div class = 'place'>
+            <h2> San Francisco </h2>
+
+                <h6>July 10, 2023</h6> <h5>- Opening Concert at Golden Gate National Park</h5>
+                <br>
+                <h6>July 11, 2023</h6> <h5>- Spotlight Concert</h5>
+                <br>
+                <h6>July 12, 2023</h6> <h5>- Historical and Folklore Competition</h5>
+                <br>
+                <h6>July 13, 2023</h6> <h5>- Gospel Spiritual and Contemporary Competition</h5>
+                <br>
+                <h6>July 15, 2023</h6> <h5>- Closing Concert of 
+                <br>
+                Golden Gate International Choral Festival </h5>
+                <br>
+                <h6>July 16, 2023</h6> <h5>- Mass and Concert at St. Robert's Catholic Church</h5>
+                <br>
+                <h6>July 18, 2023</h6> <h5>- Courtesy Call in San Francisco</h5>
+                <br>
+                <h6>July 23, 2023</h6> <h5> - Mass and Concert at the Church of the Epiphany </h5>
+
+            </div>
+    </div>
+
+    <div class="flex-child" id = 'Portland'>
+        <div class = 'place'> 
+            <h2> Portland </h2>
+                <h6>July 20, 2023</h6> <h5>- Ecce Ancilla Domini, Concert at The Grotto</h5>
+                <br>
+                <h6>July 21, 2023</h6> <h5>- Cantamus in Animo Grato, Concert in 
+                <br>
+                Holy Trinity Catholic Church</h5>
+            </div>
+    </div>
+    
+  </div>
 
   <div class = "footer">
     <h4>
